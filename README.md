@@ -28,9 +28,13 @@ For review data, it outputs data to a CSV file
 For image data, it outputs a number of directories, with
 
 -output_dir
+
 --product_id
+
 ---image_category
+
 ----image_id1.jpg
+
 ----image_id2.jpg
 
 

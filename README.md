@@ -19,6 +19,18 @@ By using this commend you will get 1 page of reviews (20 reviews) for 1 page of 
 2. If you want to get images for all products:
 python SiteClient --api image --output /path/to/your/folder
 
+for testing you can run command
+python SiteClient --api image --output /path/to/your/folder --product_page 1 --image_category main
+
+This command will download main images for 30 products (1 page of products)
+
+There are two options for --image_category parameter, main or category, if this parameter is not provided, then images of both categories will be downloaded.
+
+for example, 
+python SiteClient --api image --output /path/to/your/folder --product_page 2
+
+This command will download images of both main and category types for 60 products to your folder.
+
 Note output param accepts directory name
 
 The code will call corresponding RESUful API to get the data. The code automatcially create

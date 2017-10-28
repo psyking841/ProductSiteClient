@@ -1,6 +1,6 @@
 # Client Code for the Product Site Restful APIs
 
-# Version 0.50
+# Version 0.90
 
 # You will need to get a config file from me to connect to the server
 
@@ -36,6 +36,11 @@ Note output param accepts directory name
 The code will call corresponding RESUful API to get the data. The code automatcially create
 
 For review data, it outputs data to a CSV file
+The CSV file has following fields:
+"product_id", "product_tag", "user_name", "comments", "date"
+
+* product_id: product's id in the backend db
+* product_tag: the keyword used to search this product (e.g. 婴儿车(baby cart), 办公椅(office chair))
 
 For image data, it outputs a number of directories, with
 

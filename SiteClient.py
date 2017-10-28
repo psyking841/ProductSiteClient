@@ -34,6 +34,7 @@ if __name__ == '__main__':
 
             for item in jsondata:
                 product_id = item['_id']
+                product_tag = item['searching_keyword']
                 print("Processing reviews for product id: " + product_id)
                 comment_page = 1
                 while True:
@@ -46,7 +47,7 @@ if __name__ == '__main__':
                         for comm in jsondata2:
                             writer = csv.writer(csvfile)
                             if writer_header:
-                                writer.writerow(["product_id", "user_name", "comments", "date"])
+                                writer.writerow(["product_id", "product_tag", "user_name", "comments", "date"])
                                 writer_header = False
 
                             writer.writerow([product_id, comm['user_name'], comm['comment_contents'],

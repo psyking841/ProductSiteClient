@@ -34,12 +34,13 @@ if __name__ == '__main__':
 
             for item in jsondata:
                 product_id = item['_id']
+                print(item)
                 product_tag = item['searching_keyword']
                 print("Processing reviews for product id: " + product_id)
                 comment_page = 1
                 while True:
                     comm_resp = requests.get(url_head + '/reviews/get_reviews?product_id='
-                                             + product_id + '&page=' + str(page))
+                                             + product_id + '&page=' + str(comment_page))
                     jsondata2 = json.loads(comm_resp.text)
                     if len(jsondata2) == 0 or (args.max_comm_page and comment_page == args.max_comm_page + 1):
                         break

@@ -48,10 +48,10 @@ if __name__ == '__main__':
                         for comm in jsondata2:
                             writer = csv.writer(csvfile)
                             if writer_header:
-                                writer.writerow(["product_id", "product_tag", "user_name", "comments", "date"])
+                                writer.writerow(["review_id", "product_id", "product_tag", "user_name", "comments", "date"])
                                 writer_header = False
 
-                            writer.writerow([product_id, comm['user_name'], comm['comment_contents'],
+                            writer.writerow([comm["_id"], product_id, comm['user_name'], comm['comment_contents'],
                                              comm['comment_date']])
 
                     comment_page+=1
